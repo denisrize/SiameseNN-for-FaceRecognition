@@ -133,47 +133,47 @@ The hyperparameter tuning process involved testing various architecture configur
 
 ### Loss vs Accuracy:
 (Val – purple, Train – green)
-![best_loss](https://github.com/user-attachments/assets/e6cbbd68-a6b9-4b20-8141-10beac2de418)
+<img src="https://github.com/user-attachments/assets/e6cbbd68-a6b9-4b20-8141-10beac2de418" alt="best_loss" width="500"/>
 
 The pattern in the graph indicates that the model is effectively learning from the training data, as evidenced by the decreasing training loss. However, the slight increase in validation loss suggests the onset of overfitting, where the model might begin to memorize the training data rather than generalize. Thanks to early stopping, we mitigated this risk, ensuring the model did not overfit and maintained strong performance, as reflected in the accuracy score.
 
 ### Accuracy vs Epoch
 (Val – black, Train – orange)
-![best_accuracy](https://github.com/user-attachments/assets/021dbca6-0e8f-4afc-889e-d1fe86acc4fd)
+<img src="https://github.com/user-attachments/assets/021dbca6-0e8f-4afc-889e-d1fe86acc4fd" alt="best_accuracy" width="500"/>
 
 The accuracy graph displays an increasing trend for both the training and validation sets, indicating improvement in the model's performance over time. Specifically, the training accuracy reaches a score of 0.83, while the validation accuracy achieves a relatively high accuracy score of 0.68 (using not optimal threshold of 1.5). The relatively high validation accuracy suggests that the model maintains a good level of generalization, effectively balancing between learning from the training data and applying this knowledge to new unseen data.
 
 ### ROC-AUC curve:
 
-![best_roc_auc](https://github.com/user-attachments/assets/2462dd07-fc5c-45bc-8117-33b06af4ea6d)
+<img src="https://github.com/user-attachments/assets/2462dd07-fc5c-45bc-8117-33b06af4ea6d" alt="best_roc_auc" width="400"/>
 
 ## Best run accurate and misclassified examples:
 Using the optimal distance threshold of 1.33 from the validation ROC-AUC curve.
 
 ### True Positive ✅
 
-![true_positive_example](https://github.com/user-attachments/assets/f1ce0c36-6216-4049-bfba-75348a30d305)
+<img src="https://github.com/user-attachments/assets/f1ce0c36-6216-4049-bfba-75348a30d305" alt="true_positive_example" width="500"/>
 
 The images are indeed very similar, and the facial features are obvious, making it easy for the model to identify
 the same features and determine that this is the same person.
 
 ### True Negative ✅
 
-![true_negative](https://github.com/user-attachments/assets/6e499453-ff30-41d6-b4a6-24df2c23895b)
+<img src="https://github.com/user-attachments/assets/6e499453-ff30-41d6-b4a6-24df2c23895b" alt="true_negative" width="500"/>
 
 The colors and facial expressions vary significantly, and the facial features are distinctly clear, which makes it
 easy for the model to determine that they are two different people.
 
 ### False Positive ❌
 
-![False_positive](https://github.com/user-attachments/assets/95b46810-770d-453c-8ef8-e7e2a905f780)
+<img src="https://github.com/user-attachments/assets/95b46810-770d-453c-8ef8-e7e2a905f780" alt="False_positive" width="500"/>
 
 It is apparent that these are not the same person, yet the network had high confidence that they were. This
 may be because the facial features seem alike and the face angle, leading to a false positive case.
 
 ### False Negative ❌
 
-![same_person_misclassificatio](https://github.com/user-attachments/assets/abc487cf-6819-4cd9-80a5-93ac94f17ee1)
+<img src="https://github.com/user-attachments/assets/abc487cf-6819-4cd9-80a5-93ac94f17ee1" alt="same_person_misclassificatio" width="500"/>
 
 Even though it is the same person, the network classified them as different. This may be because, in one of the
 pictures, the individual is wearing a sunglasses, which makes it hard for the network to extract meaningful
@@ -182,7 +182,7 @@ features.
 ## Best run with linear layers replacement result:
 As mentioned previously, we replaced our three smaller fully connected layers with a single large linear layer of 4096 neurons, similar to the architecture in the original paper.
 
-![linear_val_roc](https://github.com/user-attachments/assets/509dd6e9-2906-4acf-b9be-07a417d5e31a)
+<img src="https://github.com/user-attachments/assets/509dd6e9-2906-4acf-b9be-07a417d5e31a" alt="linear_val_roc" width="400"/>
 
 ## Summary Table
 
