@@ -1,0 +1,60 @@
+
+## How to Run
+
+First install packages: pip install -r requirements.txt
+
+1. Download and Prepare LFW-a Data:
+   - Ensure the LFW-a dataset files (persons directories with their images)
+   - are located in the `./data_set/lfw2/lfw2` directory,
+   
+2. Run the Script:
+   - Execute the script in your Python environment:
+     ```
+     python Assignment2.py
+     ```        
+   - The script will:
+        - Load and preprocess the LFW-a data: The dataset is loaded and preprocessed
+          to be used for training, validation, and testing.
+        - Plot and save class and unique instances distribution graphs: Generates and saves
+          bar plots for class distribution and unique instance counts for training, validation, and test sets in the plots directory.
+        - Train the neural network with specified hyperparameters: Trains the model using
+          the predefined hyperparameters.
+        - Perform grid search over various hyperparameters: Conducts a grid search over
+          different hyperparameters including learning rate, number of convolution layers,
+          number of filters, pooling type, and batch normalization.
+        - Save the best model for each grid search: Saves the best model during training
+          for each grid search configuration in the best_models directory.
+        - Evaluate model with 1 linear layer of 4096 units: Trains and evaluates
+          the model with a single large linear layer of 4096 units as described in the original paper.
+        - Plot and save examples of accurate and misclassification examples: Saves images showing
+          examples of accurate and misclassified predictions for each model inside its corresponding directory in the best_models directory.
+        - Create TensorBoard graphs:
+            - Logs training and validation metrics such as loss, accuracy, epoch time, and ROC-AUC curve.
+            - Logs test set metrics including classification report, confusion matrix, and ROC-AUC curve.
+
+3. Results:
+- Class and Unique Instances Distribution Graphs:
+    - The graphs showing the distribution of classes and unique instances across the training, validation, and test sets are saved in the plots directory.
+- Best Models:
+    - The best models identified during the grid search are saved in the best_models directory. Each model's directory contains:
+    - The trained model file.
+    - Examples of accurate and misclassification predictions.
+    - TensorBoard logs for training and validation metrics.
+TensorBoard Visualizations:
+    Use TensorBoard to view detailed metrics and visualizations of the training process.
+    The logs include:
+        - Loss and accuracy curves for both training and validation sets.
+        - Epoch time and ROC-AUC curves.
+        - Test set evaluation metrics including classification report, confusion matrix, and ROC-AUC curve.
+
+## Hyperparameters
+
+You can adjust the following hyperparameters in the script:
+
+'learning_rate': The step size used by the optimizer to update the model's weights during training.
+'num_conv_layers': The number of convolutional layers in the neural network.
+'init_num_filters': The number of filters (channels) in the first convolutional layer, with subsequent layers typically doubling this number.
+'pooling_type': The type of pooling operation (e.g., max pooling or average pooling) used to downsample feature maps.
+'activation': The activation function (e.g., ReLU or LeakyReLU) applied after each convolutional layer.
+'epochs': The number of complete passes through the training dataset
+'batch_norm': A boolean indicating whether batch normalization is applied after convolutional layers to stabilize and accelerate training.
