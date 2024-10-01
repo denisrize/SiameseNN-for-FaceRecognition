@@ -5,9 +5,23 @@
 - [**Denis Rize**](https://github.com/denisrize)
 - [**Adir Serruya**](https://github.com/Adirser)
 
+## Project Overview
+
+The purpose of this assignment is to build a convolutional neural network (CNN) and apply it to a real-world problem—facial recognition—using one-shot learning. This assignment is based on the paper [**Siamese Neural Networks for One-shot Image Recognition**](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
+
+### Key Objectives
+
+1. **Implement a Convolutional Neural Network**:
+   - Build a Siamese network architecture to perform one-shot learning for facial recognition.
+   - Use the Labeled Faces in the Wild (LFW-a) dataset to train and test the model.
+
+2. **Apply One-Shot Learning**:
+   - The goal is to determine whether two facial images of previously unseen individuals represent the same person.
+   - Follow the architecture and concepts outlined in the referenced scientific paper, while also exploring potential modifications.
+   - 
+![siamses](https://github.com/user-attachments/assets/eddcd7b1-3350-4445-bc9f-5b2905f5729d)
+
 ## Table of Contents
-- [Project Overview](#project-overview)
-  - [Key Objectives](#key-objectives)
 - [Data Analysis](#data-analysis)
 - [Utils](#utils)
 - [Loss Function – Contrastive Loss](#loss-function--contrastive-loss)
@@ -27,23 +41,6 @@
   - [Best Run with Linear Layers Replacement Result](#best-run-with-linear-layers-replacement-result)
 - [Summary Table](#summary-table)
 - [Conclusion](#conclusion)
-- 
-## Project Overview
-
-The purpose of this assignment is to build a convolutional neural network (CNN) and apply it to a real-world problem—facial recognition—using one-shot learning. This assignment is based on the paper [**Siamese Neural Networks for One-shot Image Recognition**](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
-
-### Key Objectives
-
-1. **Implement a Convolutional Neural Network**:
-   - Build a Siamese network architecture to perform one-shot learning for facial recognition.
-   - Use the Labeled Faces in the Wild (LFW-a) dataset to train and test the model.
-
-2. **Apply One-Shot Learning**:
-   - The goal is to determine whether two facial images of previously unseen individuals represent the same person.
-   - Follow the architecture and concepts outlined in the referenced scientific paper, while also exploring potential modifications.
-   - 
-![siamses](https://github.com/user-attachments/assets/eddcd7b1-3350-4445-bc9f-5b2905f5729d)
-
 
 ## Data Analysis
 We are using the Labeled Faces in the Wild (LFW-a) dataset for this task which consists of 2200 training examples and 1000 test examples.
