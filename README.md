@@ -4,7 +4,7 @@
       <h1>SiameseNN-for-FaceRecognition: A Siamese neural network for one-shot facial recognition</h1>
     </td>
     <td>
-      <img src="https://github.com/user-attachments/assets/a66636db-d678-43cf-962b-48840dc9b915" alt="illustration" width="200">
+      <img src="https://github.com/user-attachments/assets/a66636db-d678-43cf-962b-48840dc9b915" alt="illustration" width="300">
     </td>
   </tr>
 </table> 
