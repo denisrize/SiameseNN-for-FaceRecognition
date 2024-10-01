@@ -5,6 +5,29 @@
 - [**Denis Rize**](https://github.com/denisrize)
 - [**Adir Serruya**](https://github.com/Adirser)
 
+## Table of Contents
+- [Project Overview](#project-overview)
+  - [Key Objectives](#key-objectives)
+- [Data Analysis](#data-analysis)
+- [Utils](#utils)
+- [Loss Function – Contrastive Loss](#loss-function--contrastive-loss)
+  - [How It Works](#how-it-works)
+- [Data Preprocessing](#data-preprocessing)
+  - [Transformations](#transformations)
+  - [Dataset Instances](#dataset-instances)
+  - [Data Loaders](#data-loaders)
+- [Hyperparameters and Network Architecture](#hyperparameters-and-network-architecture)
+  - [Original Architecture Insights](#original-architecture-insights)
+  - [Chosen Hyperparameters](#chosen-hyperparameters)
+  - [Regularization Methods](#regularization-methods)
+- [Results](#results)
+  - [Best Results – Train and Validation](#best-results--train-and-validation)
+  - [ROC-AUC Curve](#roc-auc-curve)
+  - [Best Run Accurate and Misclassified Examples](#best-run-accurate-and-misclassified-examples)
+  - [Best Run with Linear Layers Replacement Result](#best-run-with-linear-layers-replacement-result)
+- [Summary Table](#summary-table)
+- [Conclusion](#conclusion)
+- 
 ## Project Overview
 
 The purpose of this assignment is to build a convolutional neural network (CNN) and apply it to a real-world problem—facial recognition—using one-shot learning. This assignment is based on the paper [**Siamese Neural Networks for One-shot Image Recognition**](https://www.cs.cmu.edu/~rsalakhu/papers/oneshot1.pdf)
