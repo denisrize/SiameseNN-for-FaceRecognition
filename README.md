@@ -39,7 +39,6 @@ The purpose of this assignment is to build a convolutional neural network (CNN) 
   - [ROC-AUC Curve](#roc-auc-curve)
   - [Best Run Accurate and Misclassified Examples](#best-run-accurate-and-misclassified-examples)
   - [Best Run with Linear Layers Replacement Result](#best-run-with-linear-layers-replacement-result)
-- [Summary Table](#summary-table)
 - [Conclusion](#conclusion)
 
 ## Data Analysis
@@ -204,7 +203,7 @@ As mentioned previously, we replaced our three smaller fully connected layers wi
 
 <img src="https://github.com/user-attachments/assets/509dd6e9-2906-4acf-b9be-07a417d5e31a" alt="linear_val_roc" width="400"/>
 
-## Summary Table
+Summary Table
 
 | Convergence Time (minutes) | Early Stopping | Train ROC-AUC | Validation ROC-AUC | Optimal Threshold | Test Accuracy with Optimal Threshold |
 |----------------------------|----------------|---------------|--------------------|-------------------|--------------------------------------|
